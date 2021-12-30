@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
+<html lang="en"><head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,9 +14,9 @@
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -27,13 +25,17 @@
 
     <script src="//lightwidget.com/widgets/lightwidget.js"></script>
 
-  </head>
+  <script id="instafeed-fetcher" src="https://api.instagram.com/v1/users/4190326961/media/recent?access_token=4190326961.1677ed0.303132056ba74f8e82d4fb3276c1b6a8&amp;count=6&amp;callback=instafeedCached3e306d7b13d2957.parse"></script><style></style></head>
 
-  <body id="page-top">
+  <body id="page-top"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-classic cc-bottom cc-color-override--995789889 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">Aquesta web fa ús de les 'cookies' per oferir una millor experiència i servei.  <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="http://cookiesandyou.com" target="_blank">Més informació</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">D'acord</a></div><!--googleon: all--></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
+        <div class="news">
+            <span>Fest-te soci per només 90€ a l'any i reserva la pista a 1€/hora! <br> Ho pots fer a través del</span>
+            <a href="https://forms.gle/f5nZgyXYLJYNBLBT9" target="_blank"> següent formulari </a>
+        </div>
         <a class="js-scroll-trigger" href="#page-top">
           <img class="img-logo-padel" src="img/logo_amb_lletres_v3.png" alt="">
         </a>
@@ -48,7 +50,7 @@
               <a class="nav-link js-scroll-trigger" href="#news">Notícies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Com funciona?</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Com funciona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Classes</a>
@@ -65,11 +67,17 @@
     <!-- Header -->
     <header class="masthead">
       <div class="container">
+        <img src="./img/header/pala1.png" class="header-img img-pala-vertical draggable">
+        <img src="./img/header/pala3.png" class="header-img img-pala-vertical draggable" style="display:none">
+        <img src="./img/header/pala5.png" class="header-img img-pala-horizontal draggable">
+        <img src="./img/header/pilota1.png" class="header-img img-ball draggable" style="display:none">
+        <img src="./img/header/pilota2.png" class="header-img img-ball draggable">
+        <img src="./img/header/pot.png" class="header-img img-ball-container draggable">
+        
         <div class="intro-text">
           <div class="intro-lead-in">Benvinguts a la web de</div>
           <div class="intro-heading text-uppercase">Pàdel Puig-reig</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-           id="reservationBtn" href="http://padelpuigreig.reservaplay.com/login">RESERVA</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="reservationBtn" href="https://playtomic.io/padel-puigreig/47523a56-955a-4bd7-ab9c-3b406e398e33?q=PADEL~2021-10-26~~~">RESERVA</a>
         </div>
       </div>
     </header>
@@ -83,11 +91,14 @@
             <h3 class="section-subheading text-muted">Totes les novetats estan en el nostre instagram:</h3>
           </div>
         </div>
-        <div id="instafeed-row" class="row">
-      <!-- LightWidget WIDGET -->
-          <!-- <iframe src="//lightwidget.com/widgets/ba7f993f528b54cebd6e8ad0005e68b5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe> -->
+        <!--
+        <div id="instafeed-row" class="row" style="height: 953px;">
+       
           <ul id="instafeed"></ul>
         </div>
+        LightWidget WIDGET -->
+
+        <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'fytH-NdOG4B2rVcs8wxR'});Pixlee.addSimpleWidget({widgetId:'34370'});};</script><script src="//instafeed.assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js"></script>
       </div>
     </section>
 
@@ -101,7 +112,7 @@
           </div>
         </div>
         <div class="row">
-          <img class="img-fluid img-instructions mx-auto" src="img/about/instruccions.jpg" alt="">
+          <img class="img-fluid img-instructions mx-auto" src="img/about/instruccions.jpg" alt="" style="height: 417px;">
         </div>
       </div>
     </section>
@@ -116,82 +127,29 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/roca.jpg" alt="">
-              <h4>Ramon Roca</h4>
-              <p class="text-muted">Entrenador junior</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
+          <div class="col-sm">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/team/flores.jpg" alt="">
               <h4>Francesc Flores</h4>
-              <p class="text-muted">Entrenador Senior</p>
+              <p class="text-muted">Entrenador</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
+                  <a href="tel:685489532" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <!--<li class="list-inline-item">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/sanchez.jpg" alt="">
-              <h4>Lluís Sánchez</h4>
-              <p class="text-muted">Entrenador senior</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted">Contacta amb els nostres professors per fer classes a la pista!</p>
           </div>
         </div>
       </div>
@@ -201,24 +159,19 @@
     <section class="py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.facebook.com/barmagicpuigreig?fref=ts" target="_blank">
+              <img class="img-publi-logo img-fluid d-block mx-auto" src="img/logos/magic.png" alt="">
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+          <div class="col-md-4 col-sm-6">
+            <a href="http://www.serveisactius.cat/bergueda/serigrafia-estampacio-puig-reig" target="_blank">
+              <img class="img-publi-logo img-fluid d-block mx-auto" src="img/logos/esports_pujol.png" alt="">
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+          <div class="col-md-4 col-sm-6">
+            <a href="http://www.hotelcalmarcal.cat/" target="_blank">
+              <img class="img-publi-logo img-fluid d-block mx-auto" src="img/logos/calmarsal.jpg" alt="">
             </a>
           </div>
         </div>
@@ -230,41 +183,27 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contacte amb nosaltres</h2>
-            <h3 class="section-subheading text-muted">No dubits a posar-te en contacte amb nosaltres per qualsvol tema</h3>
+            <h2 class="section-heading text-uppercase">Contacta amb nosaltres</h2>
+            <h3 class="section-subheading text-muted contact-subheading">No dubits a posar-te en contacte amb nosaltres per qualsvol tema</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Nom *" required data-validation-required-message="Introdueix el teu nom">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Email *" required data-validation-required-message="Introdueix el teu correu electrònic">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Telèfon *" required data-validation-required-message="Introdueix el eu número de telèfon.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Missatge *" required data-validation-required-message="Introdueix un missatge"></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
-                </div>
-              </div>
-            </form>
+            <div class="col-lg-12 text-center tel-div">
+              <h3 class="section-subheading text-muted">Envia'ns un mail a:</h3>
+              <h3 class="section-heading">
+                <a href="mailto:padelpuigreig@gmail.com?Subject=Contacte%20web" target="_top">padelpuigreig@gmail.com</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center tel-div">
+            <h3 class="section-subheading text-muted">O truca'ns a un del següents telèfons:</h3>
+            <h3 class="section-heading">
+              <a href="tel:647957748" target="_blank">647 95 77 48 </a> / 
+              <a href="tel:661279677" target="_blank">661 27 96 77 </a> 
+            </h3>
           </div>
         </div>
       </div>
@@ -275,23 +214,23 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Pàdel Puig-reig 2018</span>
+            <span class="copyright">Copyright © Pàdel Puig-reig 2021</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
+                <a href="http://www.instagram.com/padelpuigreig" target="_blank">
+                  <i class="fa fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="http://www.fb.com/padelpuigreig" target="_blank">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
+                <a href="tel:647957748" target="_blank">
+                  <i class="fa fa-whatsapp"></i>
                 </a>
               </li>
             </ul>
@@ -299,10 +238,10 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a data-toggle="modal" class="terms_link" href="#privacy">Política de privacitat</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a data-toggle="modal" class="terms_link" href="#terms_and_conditions">Termes i condicions</a>
               </li>
             </ul>
           </div>
@@ -312,8 +251,8 @@
 
     <!-- Portfolio Modals -->
 
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Termes i condicions -->
+    <div class="conditions-modal modal fade" id="terms_and_conditions" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -323,21 +262,79 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+                  <h2 class="text-uppercase">Termes i condicions</h2>
+                  <p class="item-intro text-muted">Aquesta pàgina web ha estat creada per Pàdel Puig-reig. El fet d'accedir a aquesta pàgina implica el coneixement i l'acceptació dels següents termes i condicions:
+                    <br>
+                    <br>
+                    <span class="bold-text">1.</span> Pàdel Puig-reig és el proietari intel·lectual de la web. Tots els drets del contingut d’aquesta pàgina web i del seu disseny gràfic són propietat exclusiva de Pàdel Puig-reig i és a qui li correspon l’exercici exclusiu dels drets d’explotació dels mateixos.
+                    <br>
+                    <br>
+                    <span class="bold-text">2.</span> Pàdel Puig-reig no es responsabilitza del mal ús que es realitzi dels continguts de la seva pàgina web, sent exclusiva responsabilitat de la persona que hi accedeix a ells o els utilitza. Tampoc assumeix cap responsabilitat per la informació continguda en les pàgines web de tercers a les que es pugui accedir per enllaços des de la pàgina www.padelpuigreig.com
+                    <br>
+                    <br>
+                    <span class="bold-text">3.</span> Pàdel Puig-reig es reserva el dret d’actualitzar, modificar o eliminar la informació continguda en la seva pàgina web, i la seva configuració o presentació, en qualsevol moment, sense previ avis i sense assumir cap responsabilitat per fer-ho.
+                    <br>
+                    <br>
+                    <span class="bold-text">4.</span> Pàdel Puig-reig no assumeix cap responsabilitat que es pugui derivar de problemes tècnics o errades en equips informàtics aliens, així com de problemes en la xarxa d'Internet.
+                    <br>
+                    <br>
+                    <span class="bold-text">5.</span> Pàdel Puig-reig es compromet a no distribuïr les dades facilitades pels usuaris a una tercera persona física o jurídica.
+                    <br>
+                    <br>
+                    <span class="bold-text">6.</span> Amb caràcter general, les relacions amb els usuaris, que es derivin de la prestació dels serveis continguts en aquesta pàgina web, estan sotmesos a la legislació i jurisdicció espanyola.
+                    <br>
+                    <br>
+                    Els usuaris d’aquesta pàgina web són conscients de tot l’exposat i ho accepten voluntàriament.</p>
+                  <button class="btn btn-primary col-lg mx-auto btn-sx" data-dismiss="modal" type="button">Acceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacitat -->
+    <div class="conditions-modal modal fade" id="privacy" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Política de privacitat</h2>
+                  <p class="item-intro text-muted">
+                    Pàdel Puig-reig manifesta el seu respecte i compliment de les disposicions recollides en la Llei Orgànica 15/1999, de 13 de desembre, de Protecció de Dades de Caràcter Personal. Per això, l'informa de la seva política de protecció de dades perquè vostè determini voluntàriament si desitja facilitar les seves dades personals a Pàdel Puig-reig.
+                    <br>
+                    <br>
+                    Pàdel Puig-reig l'informa que les seves dades personals introduïdes a través de la pàgina present pàgina web (en endavant, el Portal), així com els que pogués facilitar en el futur en el marc de la seva relació amb aquesta entitat, seran recollits en fitxers titularitat de Pàdel Puig-reig, que serà també la destinatària de les dades. Aquests fitxers tenen la finalitat de gestionar, administrar i prestar-li els serveis o productes que sol·liciti o contracti a través del Portal de Pàdel Puig-reig, facilitar el compliment i execució dels serveis que pogués sol·licitar, conèixer millor els seus gustos i opinions respecte als serveis de Pàdel Puig-reig i adequar-los a les seves preferències, així com poder oferir nous serveis i enviar-li informació comercial relacionada amb les novetats i promocions de Pàdel Puig-reig.
+                    Excepte en els camps en què expressament es determine el contrari, les respostes a les preguntes sobre dades personals són voluntàries, sense que la falta de contestació a aquestes preguntes impliqui una minva en la qualitat dels serveis que vostè sol·licita. La manca d'emplenament dels camps determinats com obligatoris o el subministrament de dades incorrectes impossibilitarà que Pàdel Puig-reig pugui prestar-li els serveis que sol·liciti.
+                    Així mateix, en la recerca de total transparència en la seva relació amb l'usuari, Pàdel Puig-reig l'informa de la utilització en aquest Portal d'altres mecanismes informàtics relacionats amb les dades personals, com són galetes i logs.
+                    Els logs són uns arxius emmagatzemats al servidor de Pàdel Puig-reig que registren dades sobre la seva navegació i que tenen per finalitat principal reunir informació sobre les operacions realitzades per vostè. També ens permeten seguir prestant els serveis que heu demanat, conèixer millor les seves preferències i oferir-li altres serveis que puguin adequar als seus gustos. Així mateix, ens ajuden a analitzar el funcionament del sistema, localitzar les incidències i problemes que puguin sorgir i solucionar en el menor termini possible.
+                    <br>
+                    <br>
+                    Vostè tindrà la possibilitat d'exercir els drets d'accés, rectificació, cancel·lació i oposició de les seves dades personals que obren en els fitxers de Pàdel Puig-reig, sol·licitant en els termes legalment establerts per qualsevol mitjà que deixi constància del seu enviament i de la seva recepció. Per exercir els seus drets, podrà dirigir-se per escrit a la direcció de Pàdel Puig-reig o al correu electrònic indicats a l'inici de la present Política de Privacitat
+                    Pàdel Puig-reig manté els nivells de protecció de les seves dades personals conforme al Reial decret 1720/2007, i ha establert tots els mitjans tècnics al seu abast per evitar la pèrdua, mal ús, alteració, accés no autoritzat i robatori de les dades que vostè faciliti a Pàdel Puig-reig, sense perjudici que les mesures de seguretat a Internet no siguin inexpugnables.
+                    <br>
+                    <br>
+                    Pàdel Puig-reig es reserva la facultat de modificar aquesta Política de Privacitat per adaptar-la a les novetats legislatives, jurisprudencials o d'interpretació de l'Agència de Protecció de Dades.
+                    <br>
+                    <br>
+                    La present Política de Privacitat podrà ser complementada per qualssevol altres clàusules o condicions generals d'accés a determinats serveis, en cas que aquest accés suposi alguna especialitat en matèria de protecció de dades de caràcter personal.
+                    <br>
+                    <br>
+                    En tot cas, aquestes especialitats no són aplicables a les seves dades personals en tant no accepti les esmentades clàusules o mencions.
+                  </p>
+                  <button class="btn btn-primary col-lg mx-auto btn-sx" data-dismiss="modal" type="button">Acceptar</button>
                 </div>
               </div>
             </div>
@@ -354,6 +351,9 @@
     <script src="vendor/bootstrap/js/util.js"></script>
 
     <!-- Plugin JavaScript -->
+    <script src="vendor/interact/interact.min.js"></script>
+
+    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -368,7 +368,7 @@
     <script src="js/index.js"></script>
 
     <!-- Cookies -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script>
     window.addEventListener("load", function(){
@@ -402,6 +402,10 @@
 
       var win = $(window); 
       updateInstafeedSize(win.width());
+      var isMobile = false; //initiate as false
+      // device detection
+      if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+          || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;
 
       var feed = new Instafeed({
           get: 'user',
@@ -409,7 +413,7 @@
           clientId: '4857b8eaaddb4c6e9f6e77aa91fed029',
           accessToken: '4190326961.1677ed0.303132056ba74f8e82d4fb3276c1b6a8',
           limit: 6,
-          resolution: 'standard_resolution',//'low_resolution',
+          resolution: isMobile ? 'low_resolution' : 'standard_resolution',//,
           template: '<li class="instagram-tile"><a class="intagram-link" href="{{link}}" target="_blank"><figure class="instagram-figure"><div class="instagram-wrapper"><img src="{{image}}" /></div></figure></a></li>',
           after: function(response){
             
@@ -432,6 +436,7 @@
       feed.run();
   </script>
 
-  </body>
+  
 
-</html>
+
+</body></html>
