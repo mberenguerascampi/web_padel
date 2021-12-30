@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pàdel Puig-reig</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/agency.min.css" rel="stylesheet">
+
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/ui/2.6.1/firebase-ui-auth__ca.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="js-scroll-trigger" href="#page-top">
+          <img class="img-logo-padel" src="img/logo_amb_lletres_v3.png" alt="">
+        </a>
+
+        
+        
+        
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <img src="./img/header/pala1.png" class="header-img img-pala-vertical draggable">
+        <img src="./img/header/pala3.png" class="header-img img-pala-vertical draggable" style="display:none">
+        <img src="./img/header/pala5.png" class="header-img img-pala-horizontal draggable">
+        <img src="./img/header/pilota1.png" class="header-img img-ball draggable" style="display:none">
+        <img src="./img/header/pilota2.png" class="header-img img-ball draggable">
+        <img src="./img/header/pot.png" class="header-img img-ball-container draggable">
+        
+        <div class="intro-text">
+          <div class="intro-lead-in">Pàgina d'admin de</div>
+          <div class="intro-heading text-uppercase">Pàdel Puig-reig</div>
+          <button class="btn btn-link btn-sm js-scroll-trigger sign-btn-big"  data-toggle="popover" data-placement="bottom" id="sign-in" data-content='<div id="firebaseui-auth-container"></div><div id="loader">Loading...</div>' style="display:none; padding: 4px !important;">
+            <i class="material-icons">&#xE853;</i>
+            </button>
+            <button class="btn btn-link btn-sm js-scroll-trigger sign-btn-big" id="sign-out" style="display:none; padding: 4px !important;">
+              <i class="material-icons">&#xE879;</i>
+            </button>
+            <div id="account-details"></div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- L0gin popup -->
+    <div class="modal fade" id="loginPopup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="login-title">{{ loginTitle }}</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- Login form -->
+          <div class="modal-body" v-show="!displaySignUpForm">
+            
+            <div v-show="displayEmailForm" class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-sign-in">
+              <form onsubmit="return false;">
+                <div class="firebaseui-card-content firebase-email-card">
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="email">Adreça electrònica</label>
+                    <input type="email" name="email" autocomplete="username" class="mdl-textfield__input firebaseui-input firebaseui-id-email" v-model="email">
+                  </div>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="password">Contrasenya</label>
+                    <input type="password" name="password" autocomplete="current-password" class="mdl-textfield__input firebaseui-input firebaseui-id-password" v-model="password">
+                  </div>
+                  <div class="firebaseui-error-wrapper">
+                    <p v-show="errorLabelDisplay()" class="firebaseui-error firebaseui-text-input-error firebaseui-id-password-error">{{ errorMsg }}</p>
+                  </div>
+                </div>
+                <div class="firebaseui-card-actions">
+                  <div class="firebaseui-form-links">
+                    <a v-on:click="passwordRecovery" class="firebaseui-link firebaseui-id-secondary-link firebase-forget-password" href="javascript:void(0)">Has perdut la contrasenya?</a>
+                  </div>
+                  <div class="firebaseui-form-actions">
+                    <button v-on:click="signIn" type="submit" class="firebaseui-id-submit firebaseui-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-upgraded=",MaterialButton">Inicia la sessió</button>
+                  </div>
+                </div>
+              </form>
+
+              <div class="firebaseui-card-actions firebaseui-card-actions-signup">
+                <div class="firebaseui-form-links">
+                  <a v-on:click="showSignUpForm" id="signUpLink" class="firebaseui-link firebaseui-id-secondary-link" href="javascript:void(0)">No tens compte? Registra't!</a>
+                </div>
+              </div>
+
+              <p id="otherOptionsLabel" class="firebaseui-title"> O si ho prefereixes pots iniciar sessió amb</p>
+
+              <div id="firebaseui-auth-container-popup"></div>
+            </div>
+
+            <div v-show="!displayEmailForm" class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-recovery">
+              <form onsubmit="return false;">
+                <div class="firebaseui-card-content">
+                  <p class="firebaseui-text">Rep un correu electrònic amb instruccions per restablir la contrasenya</p>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="email">Adreça electrònica</label>
+                    <input type="email" name="email" autocomplete="username" class="mdl-textfield__input firebaseui-input firebaseui-id-email" v-model="email">
+                  </div>
+                  <div class="firebaseui-error-wrapper">
+                    <p class="firebaseui-error firebaseui-text-input-error firebaseui-hidden firebaseui-id-email-error"></p>
+                  </div>
+                </div>
+                <div class="firebaseui-card-actions">
+                  <div class="firebaseui-form-actions">
+                    <button v-on:click="cancelPasswordRecovery" class="firebaseui-id-secondary-link firebaseui-button mdl-button mdl-js-button mdl-button--primary" data-upgraded=",MaterialButton">Cancel·lar</button>
+                    <button v-on:click="sendPasswordRecovery" type="submit" class="firebaseui-id-submit firebaseui-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-upgraded=",MaterialButton">Envia</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+          <!-- Sign Up -->
+          <div class="modal-body" v-show="displaySignUpForm">
+            <div class="mdl-card mdl-shadow--2dp firebaseui-container firebaseui-id-page-password-sign-in">
+              <form onsubmit="return false;">
+                <div class="firebaseui-card-content firebase-email-card">
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="email">Adreça electrònica</label>
+                    <input type="email" name="email" autocomplete="email" class="mdl-textfield__input firebaseui-input firebaseui-id-email" v-model="email">
+                  </div>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="username">Nom i cognoms</label>
+                    <input type="text" name="username" autocomplete="username" class="mdl-textfield__input firebaseui-input firebaseui-id-email" v-model="name">
+                  </div>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="phone">Mòbil</label>
+                    <input type="number" name="phone" autocomplete="phone" class="mdl-textfield__input firebaseui-input firebaseui-id-email" v-model="phone">
+                  </div>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="password">Contrasenya</label>
+                    <input type="password" name="password" autocomplete="current-password" class="mdl-textfield__input firebaseui-input firebaseui-id-password" v-model="password">
+                  </div>
+                  <div class="firebaseui-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-dirty is-upgraded" data-upgraded=",MaterialTextfield">
+                    <label class="mdl-textfield__label firebaseui-label" for="password-repeat">Repetir contrasenya</label>
+                    <input type="password" name="password-repeat" autocomplete="current-password" class="mdl-textfield__input firebaseui-input firebaseui-id-password" v-model="passwordRepeat">
+                  </div>
+                  <div class="firebaseui-error-wrapper">
+                    <p v-show="signUpErrorMsg !== ''" class="firebaseui-error firebaseui-text-input-error firebaseui-id-password-error">{{ signUpErrorMsg }}</p>
+                  </div>
+                </div>
+                <div class="firebaseui-card-actions">
+                  <div class="firebaseui-form-actions">
+                    <button v-on:click="cancelSignUp" class="firebaseui-id-secondary-link firebaseui-button mdl-button mdl-js-button mdl-button--primary" data-upgraded=",MaterialButton">Cancel·lar</button>
+                    <button v-on:click="signUp" type="submit" class="firebaseui-id-submit firebaseui-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-upgraded=",MaterialButton">Crear usuari</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/js/util.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/interact/interact.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="vendor/instafeed/instafeed.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+    <script src="js/index.js"></script>
+
+
+      <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBWHJyCuBJnG_hLK67yBtNKBwQNs_C5iCg",
+        authDomain: "accesscontrol-f2410.firebaseapp.com",
+        databaseURL: "https://accesscontrol-f2410.firebaseio.com",
+        projectId: "accesscontrol-f2410",
+        storageBucket: "accesscontrol-f2410.appspot.com",
+        messagingSenderId: "1080277297588"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="js/auth.js"></script>
+
+  </body>
+
+</html>

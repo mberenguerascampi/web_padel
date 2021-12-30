@@ -148,9 +148,21 @@
     left:50%;
 }
 
-#sign-out .material-icons{
+.sign-btn-big{
+    color: white;
+    position: absolute;
+    left:50%;
+}
+
+.sign-btn-big i{
+    font-size: 70px;
+}
+
+
+.sign-out .material-icons{
     font-size: 28px !important;
 }
+
 
 #otherOptionsLabel{
     text-align: center;
@@ -370,6 +382,10 @@
     .sign-btn{
         left:60%;
         top:15px;
+    }
+
+    .sign-btn-big{
+        left:40%;
     }
 
     section {

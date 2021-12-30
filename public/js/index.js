@@ -20,7 +20,7 @@ var Login = new Vue ({
 			this.errorMsg = "";
 			var self = this;
 		  	firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(function() {
-		      var url = window.location.origin + "/reserves.html";
+		      var url = window.location.origin + "/reserves_admin.html";
       		  window.location = url;
 		    })
 		    .catch(function(error) {
@@ -66,7 +66,7 @@ var Login = new Vue ({
 					  headers: {"Authorization" : "Bearer " + idToken},
 					  data: userData,
 					  success: function(res) {
-					  	var url = window.location.origin + "/reserves.html";
+					  	var url = window.location.origin + "/reserves_admin.html";
       		  			window.location = url;
 					  },
 					  error: function(err) {
